@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GowBKszQ+gg=",
+  "dgSpecHash": "p/c9Zk1iQxk=",
   "success": true,
   "projectFilePath": "D:\\0 - CODING\\Net\\Neill cummings\\microservicios-next\\src\\Contracts\\Contracts.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\marti\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
-    "C:\\Users\\marti\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
-    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
