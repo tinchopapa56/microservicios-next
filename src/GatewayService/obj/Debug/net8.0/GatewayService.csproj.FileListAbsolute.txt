@@ -1,5 +1,4 @@
 D:\0 - CODING\Net\Neill cummings\microservicios-next\src\GatewayService\bin\Debug\net8.0\appsettings.Development.json
-D:\0 - CODING\Net\Neill cummings\microservicios-next\src\GatewayService\bin\Debug\net8.0\appsettings.Docker.json
 D:\0 - CODING\Net\Neill cummings\microservicios-next\src\GatewayService\bin\Debug\net8.0\appsettings.json
 D:\0 - CODING\Net\Neill cummings\microservicios-next\src\GatewayService\bin\Debug\net8.0\GatewayService.exe
 D:\0 - CODING\Net\Neill cummings\microservicios-next\src\GatewayService\bin\Debug\net8.0\GatewayService.deps.json
