@@ -19,7 +19,7 @@ builder.Services.AddHttpClient<AuctionSvcHttpClient>().AddPolicyHandler(GetPolic
 builder.Services.AddMassTransit(x => 
 {
     x.AddConsumersFromNamespaceContaining<AuctionCreatedConsumer>();
-    x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("search", false)); //search-auction-created
+    x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("search", false));
     x.UsingRabbitMq((context, config) => 
     {
         config.Host(builder.Configuration["RabbitMq:Host"], "/", host =>
@@ -30,7 +30,7 @@ builder.Services.AddMassTransit(x =>
 
         config.ReceiveEndpoint("search-auction-created", e =>
         {
-            e.UseMessageRetry(r => r.Interval(5,5));
+            e.UseMessageRetry(r => r.Interval(5, 5));
 
             e.ConfigureConsumer<AuctionCreatedConsumer>(context);
         });
@@ -40,29 +40,17 @@ builder.Services.AddMassTransit(x =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    // app.MapOpenApi();
-}
+app.UseAuthorization();
 
 app.MapControllers();
 
 app.Lifetime.ApplicationStarted.Register(async () =>
 {
-    try
-    {
-        await DbInitializer.InitDb(app); //Static Helper
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine($"error MONGO: {e.Message}");
-    }
+    await Policy.Handle<TimeoutException>()
+        .WaitAndRetryAsync(5, retryAttempt => TimeSpan.FromSeconds(10))
+        .ExecuteAndCaptureAsync(async () =>  await DbInitializer.InitDb(app));
+
 });
-
-
-
-// app.UseHttpsRedirection();
 
 app.Run();
 
