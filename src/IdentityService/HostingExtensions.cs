@@ -47,7 +47,7 @@ internal static class HostingExtensions
 
                 if (builder.Environment.IsEnvironment("Docker"))
                 {
-                    options.IssuerUri = "http://localhost:5001";
+                    options.IssuerUri = "http://localhost:5000";
                 }
 
                 // if (builder.Environment.IsProduction())

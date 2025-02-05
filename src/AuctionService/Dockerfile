@@ -21,7 +21,7 @@ WORKDIR /app/src/AuctionService
 RUN dotnet publish -c Release -o /app/src/out
 
 # Builde runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /app
 COPY --from=build /app/src/out .
 ENTRYPOINT [ "dotnet", "AuctionService.dll" ]
