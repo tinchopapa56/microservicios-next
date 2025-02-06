@@ -127,7 +127,7 @@
             },
             "MongoDB.Entities": {
               "target": "Package",
-              "version": "[24.1.0, )"
+              "version": "[24.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

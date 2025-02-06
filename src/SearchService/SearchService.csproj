@@ -12,7 +12,7 @@
     <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.5-develop.2185" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.12" />
     <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="8.0.12" />
-    <PackageReference Include="MongoDB.Entities" Version="24.1.0" />
+    <PackageReference Include="MongoDB.Entities" Version="24.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
   

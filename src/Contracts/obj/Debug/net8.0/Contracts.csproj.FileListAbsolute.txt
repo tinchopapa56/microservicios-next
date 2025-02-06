@@ -5,6 +5,7 @@ D:\0 - CODING\Net\Neill cummings\microservicios-next\src\Contracts\obj\Debug\net
 D:\0 - CODING\Net\Neill cummings\microservicios-next\src\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfoInputs.cache
 D:\0 - CODING\Net\Neill cummings\microservicios-next\src\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfo.cs
 D:\0 - CODING\Net\Neill cummings\microservicios-next\src\Contracts\obj\Debug\net8.0\Contracts.csproj.CoreCompileInputs.cache
+D:\0 - CODING\Net\Neill cummings\microservicios-next\src\Contracts\obj\Debug\net8.0\Contracts.sourcelink.json
 D:\0 - CODING\Net\Neill cummings\microservicios-next\src\Contracts\obj\Debug\net8.0\Contracts.dll
 D:\0 - CODING\Net\Neill cummings\microservicios-next\src\Contracts\obj\Debug\net8.0\refint\Contracts.dll
 D:\0 - CODING\Net\Neill cummings\microservicios-next\src\Contracts\obj\Debug\net8.0\Contracts.pdb
