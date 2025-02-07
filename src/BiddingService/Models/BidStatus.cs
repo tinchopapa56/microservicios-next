@@ -1,10 +1,9 @@
-namespace BiddingService.Models
+namespace BiddingService;
+
+public enum BidStatus
 {
-    public enum BidStatus
-    {
-        Accepted, 
-        AcceptedBelowReserve,
-        TooLow,
-        Finished,
-    }
+    Accepted,
+    AcceptedBelowReserve,
+    TooLow,
+    Finished
 }

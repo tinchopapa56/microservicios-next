@@ -1,26 +1,22 @@
 using Contracts;
 using MassTransit;
 using MongoDB.Entities;
-using SearchService;
 
-namespace AuctionService.Consumers
+namespace SearchService;
+
+public class BidPlacedConsumer : IConsumer<BidPlaced>
 {
-    public class BidPlacedConsumer : IConsumer<BidPlaced>
+    public async Task Consume(ConsumeContext<BidPlaced> context)
     {
-        //mongo db has acces gives us access via static methodsm, no need for dependency injection
-        public async Task Consume(ConsumeContext<BidPlaced> context)
-        {
-            Console.WriteLine("--> Consuming Bid Placed");
-            
-            var auction = await DB.Find<Item>().OneAsync(context.Message.AuctionId);
-            
-            bool newBidIsHigher = context.Message.BidStatus.Contains("Accepted") && context.Message.Amount > auction.CurrentHighBid;
-            if (auction.CurrentHighBid is null || newBidIsHigher)
-            {
-                auction.CurrentHighBid = context.Message.Amount;
-                await auction.SaveAsync();
-            }
+        Console.WriteLine("--> Consuming bid placed");
 
+        var auction = await DB.Find<Item>().OneAsync(context.Message.AuctionId);
+
+        if (context.Message.BidStatus.Contains("Accepted") 
+            && context.Message.Amount > auction.CurrentHighBid)
+        {
+            auction.CurrentHighBid = context.Message.Amount;
+            await auction.SaveAsync();
         }
     }
 }

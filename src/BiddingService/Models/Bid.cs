@@ -1,4 +1,3 @@
-using BiddingService.Models;
 using MongoDB.Entities;
 
 namespace BiddingService;

@@ -1,5 +1,4 @@
 using AutoMapper;
-using BiddingService.Models;
 using Contracts;
 
 namespace BiddingService;
